@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,16 +53,29 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				zen: {
+					mint: 'hsl(var(--mint-green))',
+					brown: 'hsl(var(--brown))',
+					soft: 'hsl(var(--soft-brown))',
+					light: 'hsl(var(--light-brown))',
+					warm: 'hsl(var(--warm-brown))',
+					blue: 'hsl(var(--zen-blue))',
+					gray: 'hsl(var(--text-gray))',
+					dark: 'hsl(var(--dark-gray))'
 				}
+			},
+			backgroundImage: {
+				'gradient-zen': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-subtle': 'var(--gradient-subtle)'
+			},
+			boxShadow: {
+				'zen': 'var(--shadow-zen)',
+				'zen-soft': 'var(--shadow-soft)',
+				'zen-glow': 'var(--shadow-glow)'
+			},
+			transitionTimingFunction: {
+				'zen': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
