@@ -31,8 +31,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img src="/src/assets/otter-logo.png" alt="Otterino Logo" className="w-8 h-8 object-contain" />
+          <div className="flex items-center">
             <h2 className="text-2xl font-bold text-primary">Otterino.com</h2>
           </div>
 
