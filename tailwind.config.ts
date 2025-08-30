@@ -53,29 +53,31 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				zen: {
-					mint: 'hsl(var(--mint-green))',
-					brown: 'hsl(var(--brown))',
-					soft: 'hsl(var(--soft-brown))',
-					light: 'hsl(var(--light-brown))',
+				otter: {
+					brown: 'hsl(var(--otter-brown))',
 					warm: 'hsl(var(--warm-brown))',
-					blue: 'hsl(var(--zen-blue))',
-					gray: 'hsl(var(--text-gray))',
-					dark: 'hsl(var(--dark-gray))'
+					light: 'hsl(var(--light-brown))',
+					soft: 'hsl(var(--soft-brown))',
+					jeans: 'hsl(var(--jeans-green))',
+					mint: 'hsl(var(--mint-accent))',
+					dark: 'hsl(var(--dark-brown))',
+					text: 'hsl(var(--text-brown))',
+					cream: 'hsl(var(--cream))'
 				}
 			},
 			backgroundImage: {
-				'gradient-zen': 'var(--gradient-primary)',
+				'gradient-otter': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-jeans': 'var(--gradient-jeans)'
 			},
 			boxShadow: {
-				'zen': 'var(--shadow-zen)',
-				'zen-soft': 'var(--shadow-soft)',
-				'zen-glow': 'var(--shadow-glow)'
+				'otter': 'var(--shadow-brown)',
+				'otter-soft': 'var(--shadow-soft)',
+				'otter-glow': 'var(--shadow-glow)'
 			},
 			transitionTimingFunction: {
-				'zen': 'cubic-bezier(0.4, 0, 0.2, 1)'
+				'otter': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

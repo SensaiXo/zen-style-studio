@@ -25,14 +25,15 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-lg shadow-zen-soft' 
+        ? 'bg-white/95 backdrop-blur-lg shadow-otter-soft' 
         : 'bg-white/90 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center">
-            <h2 className="text-2xl font-bold text-primary">Zen Studio</h2>
+          <div className="flex items-center gap-3">
+            <img src="/src/assets/otter-logo.png" alt="Otterino Logo" className="w-8 h-8 object-contain" />
+            <h2 className="text-2xl font-bold text-primary">Otterino.com</h2>
           </div>
 
           {/* Desktop Navigation */}
@@ -41,7 +42,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="relative text-zen-dark font-medium transition-colors duration-300 hover:text-primary group"
+                  className="relative text-otter-text font-medium transition-colors duration-300 hover:text-primary group"
                 >
                   {link.label}
                   <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -77,7 +78,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block text-zen-dark font-medium transition-colors duration-300 hover:text-primary"
+                  className="block text-otter-text font-medium transition-colors duration-300 hover:text-primary"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

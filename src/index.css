@@ -7,45 +7,46 @@
 /* Zen Style Studio Design System */
 @layer base {
   :root {
-    /* Zen Color Palette */
-    --mint-green: 172 76% 75%;
-    --brown: 25 45% 40%;
-    --soft-brown: 36 51% 65%;
-    --light-brown: 35 44% 78%;
-    --warm-brown: 35 35% 60%;
-    --zen-blue: 194 37% 47%;
-    --text-gray: 215 15% 45%;
-    --dark-gray: 210 22% 22%;
+    /* Otterino Color Palette - Brown & Jeans Green */
+    --otter-brown: 25 65% 35%;
+    --warm-brown: 25 55% 50%;
+    --light-brown: 25 40% 70%;
+    --soft-brown: 25 30% 85%;
+    --jeans-green: 160 25% 45%;
+    --mint-accent: 160 35% 60%;
+    --dark-brown: 25 45% 25%;
+    --text-brown: 25 35% 30%;
+    --cream: 25 25% 95%;
     
     /* Base tokens */
     --background: 0 0% 100%;
     --foreground: 210 22% 22%;
     
     /* Primary brand colors */
-    --primary: 194 37% 47%;
+    --primary: 25 65% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 172 76% 75%;
+    --primary-glow: 25 55% 50%;
     
     /* Secondary colors */
-    --secondary: 35 44% 78%;
-    --secondary-foreground: 210 22% 22%;
+    --secondary: 160 25% 45%;
+    --secondary-foreground: 0 0% 100%;
     
     /* Muted colors */
     --muted: 0 0% 98%;
     --muted-foreground: 215 15% 45%;
     
     /* Accent colors */
-    --accent: 172 76% 75%;
-    --accent-foreground: 210 22% 22%;
+    --accent: 25 55% 50%;
+    --accent-foreground: 0 0% 100%;
     
     /* Card colors */
     --card: 0 0% 100%;
     --card-foreground: 210 22% 22%;
     
     /* Border and input */
-    --border: 172 30% 85%;
-    --input: 172 30% 85%;
-    --ring: 194 37% 47%;
+    --border: 25 20% 88%;
+    --input: 25 20% 88%;
+    --ring: 25 65% 35%;
     
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -56,14 +57,15 @@
     --popover-foreground: 210 22% 22%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--zen-blue)), hsl(var(--mint-green)), hsl(var(--soft-brown)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--mint-green)) 50%, hsl(var(--light-brown)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--otter-brown)), hsl(var(--warm-brown)), hsl(var(--jeans-green)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--light-brown)) 50%, hsl(var(--jeans-green)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--soft-brown) / 0.3));
+    --gradient-jeans: linear-gradient(45deg, hsl(var(--jeans-green)), hsl(var(--mint-accent)));
     
     /* Shadows */
-    --shadow-zen: 0 10px 30px hsla(var(--zen-blue), 0.3);
-    --shadow-glow: 0 0 40px hsla(var(--mint-green), 0.4);
-    --shadow-soft: 0 4px 15px hsla(var(--zen-blue), 0.2);
+    --shadow-brown: 0 10px 30px hsla(var(--otter-brown), 0.3);
+    --shadow-glow: 0 0 40px hsla(var(--jeans-green), 0.4);
+    --shadow-soft: 0 4px 15px hsla(var(--warm-brown), 0.2);
     
     /* Animations */
     --transition-zen: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
