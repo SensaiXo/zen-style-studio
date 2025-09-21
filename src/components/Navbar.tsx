@@ -57,14 +57,17 @@ const Navbar = () => {
                 {link.isDropdown ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger className="flex items-center relative text-foreground font-medium transition-colors duration-300 hover:text-primary group">
-                      {link.label} <ChevronDown className="h-4 w-4 ml-1" />
+                      <Link to="/services" className="hover:text-primary transition-colors">
+                        {link.label}
+                      </Link>
+                      <ChevronDown className="h-4 w-4 ml-1" />
                       <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-background border-primary/20">
                       {link.dropdownItems?.map((item) => (
                         <DropdownMenuItem key={item.href} className="hover:bg-accent/50 focus:bg-accent/50">
-                          <Link 
-                            to={item.href} 
+                          <Link
+                            to={item.href}
                             className="w-full text-foreground hover:text-primary transition-colors"
                           >
                             {item.label}
@@ -113,9 +116,13 @@ const Navbar = () => {
               <li key={link.href}>
                 {link.isDropdown ? (
                   <div className="space-y-2">
-                    <div className="block text-foreground font-medium mb-2">
+                    <Link
+                      to="/services"
+                      className="block text-foreground font-medium mb-2 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       {link.label}
-                    </div>
+                    </Link>
                     <ul className="pl-4 space-y-2 border-l border-primary/20">
                       {link.dropdownItems?.map((item) => (
                         <li key={item.href}>
