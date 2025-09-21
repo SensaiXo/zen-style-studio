@@ -35,14 +35,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl lg:text-5xl font-bold text-otter-text mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Unsere Digital-Lösungen
           </h2>
-          <p className="text-xl text-otter-text max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-3xl mx-auto">
             Websites mit integrierter Sichtbarkeit. Wir verbinden kreatives Design 
             mit moderner SEO- und AI-Optimierung für maximale Online-Präsenz.
           </p>
@@ -53,7 +53,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-3xl shadow-otter-soft border border-otter-jeans/20 transition-all duration-300 hover:shadow-otter hover:-translate-y-2 relative overflow-hidden"
+              className="group bg-card p-8 rounded-3xl shadow-otter-soft border border-primary/20 transition-all duration-300 hover:shadow-otter hover:-translate-y-2 relative overflow-hidden"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -66,10 +66,10 @@ const Services = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-semibold text-otter-text mb-4 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-otter-text leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
 
