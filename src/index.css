@@ -7,46 +7,46 @@
 /* Zen Style Studio Design System */
 @layer base {
   :root {
-    /* Black & Pink Color Palette */
-    --otter-brown: 330 100% 50%;
-    --warm-brown: 330 80% 60%;
-    --light-brown: 330 60% 70%;
-    --soft-brown: 330 40% 80%;
-    --jeans-green: 330 100% 50%;
-    --mint-accent: 330 80% 60%;
-    --dark-brown: 0 0% 0%;
-    --text-brown: 0 0% 100%;
-    --cream: 0 0% 95%;
+    /* Brown & Jeans Green Color Palette */
+    --otter-brown: 25 50% 35%;
+    --warm-brown: 25 40% 45%;
+    --light-brown: 25 30% 55%;
+    --soft-brown: 25 20% 65%;
+    --jeans-green: 160 40% 35%;
+    --mint-accent: 160 50% 45%;
+    --dark-brown: 25 30% 15%;
+    --text-brown: 25 10% 85%;
+    --cream: 35 20% 95%;
     
     /* Base tokens */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 25 30% 15%;
+    --foreground: 25 10% 85%;
 
     /* Primary brand colors */
-    --primary: 330 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --primary-glow: 330 100% 60%;
+    --primary: 25 50% 35%;
+    --primary-foreground: 25 10% 85%;
+    --primary-glow: 25 40% 45%;
 
     /* Secondary colors */
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 160 40% 35%;
+    --secondary-foreground: 25 10% 85%;
 
     /* Muted colors */
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 85%;
+    --muted: 25 20% 25%;
+    --muted-foreground: 25 10% 75%;
 
     /* Accent colors */
-    --accent: 330 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 160 40% 35%;
+    --accent-foreground: 25 10% 85%;
 
     /* Card colors */
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    --card: 25 25% 20%;
+    --card-foreground: 25 10% 85%;
 
     /* Border and input */
-    --border: 330 50% 30%;
-    --input: 0 0% 10%;
-    --ring: 330 100% 50%;
+    --border: 25 30% 35%;
+    --input: 25 20% 25%;
+    --ring: 25 50% 35%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
@@ -57,16 +57,16 @@
     --popover-foreground: 0 0% 100%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(330 100% 50%), hsl(330 80% 60%), hsl(0 0% 0%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(330 100% 50%) 50%, hsl(330 80% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 0%), hsl(330 50% 10%));
-    --gradient-jeans: linear-gradient(45deg, hsl(330 100% 50%), hsl(330 80% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(25 50% 35%), hsl(25 40% 45%), hsl(160 40% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 30% 15%) 0%, hsl(25 50% 35%) 50%, hsl(160 40% 35%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(25 30% 15%), hsl(25 40% 20%));
+    --gradient-jeans: linear-gradient(45deg, hsl(160 40% 35%), hsl(160 50% 45%));
     
     /* Shadows */
-    --shadow-brown: 0 10px 30px hsla(330, 100%, 50%, 0.3);
-    --shadow-glow: 0 0 40px hsla(330, 100%, 50%, 0.4);
-    --shadow-soft: 0 4px 20px hsla(330, 100%, 50%, 0.3);
-    --shadow-pink: 0 0 25px hsla(330, 100%, 50%, 0.5);
+    --shadow-brown: 0 10px 30px hsla(25, 50%, 35%, 0.3);
+    --shadow-glow: 0 0 40px hsla(25, 50%, 35%, 0.4);
+    --shadow-soft: 0 4px 20px hsla(25, 50%, 35%, 0.3);
+    --shadow-pink: 0 0 25px hsla(160, 40%, 35%, 0.5);
     
     /* Animations */
     --transition-zen: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
