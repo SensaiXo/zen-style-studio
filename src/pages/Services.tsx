@@ -3,10 +3,15 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Globe, Search, Paintbrush, Target, Code, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Services - Zen Style Studio</title>
+        <meta name="description" content="Entdecken Sie unsere Services: Webdesign, SEO, lokale SEO und Web-Präsenz-Optimierung." />
+      </Helmet>
       <Navbar />
 
       {/* Hero Section */}

@@ -3,10 +3,15 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Search, BarChart, Zap, Globe, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const SEO = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>SEO & GEO Optimierung - Zen Style Studio</title>
+        <meta name="description" content="Verbessern Sie Ihre Sichtbarkeit in Suchmaschinen mit unseren SEO- und GEO-Optimierungsstrategien." />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

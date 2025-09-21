@@ -2,10 +2,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Globe, Laptop, Smartphone, Paintbrush, Code } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const WebDesign = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Web Design & Development - Zen Style Studio</title>
+        <meta name="description" content="Professionelles Webdesign und Entwicklung mit modernen Frameworks für eine optimale User Experience." />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

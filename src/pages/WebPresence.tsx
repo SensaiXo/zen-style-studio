@@ -3,10 +3,15 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Globe, Share2, Wifi, LineChart, MessageCircle, Megaphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const WebPresence = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Digitale Web-Präsenz - Zen Style Studio</title>
+        <meta name="description" content="Stärken Sie Ihre Online-Identität mit einer umfassenden digitalen Präsenz." />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

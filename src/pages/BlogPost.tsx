@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Link } from 'react-router-dom';
 import { Calendar, User, Tag } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const BlogPost = () => {
   // This is a sample post. In a real application, you would fetch this data based on the slug.
@@ -51,6 +52,10 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{post.title} - Zen Style Studio</title>
+        <meta name="description" content="Ein Blogbeitrag über die Bedeutung einer starken Web-Präsenz." />
+      </Helmet>
       <Navbar />
       
       <div className="pt-32 pb-20 bg-background">

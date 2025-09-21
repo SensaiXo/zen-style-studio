@@ -3,10 +3,15 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Target, MapPin, Store, Globe, MessageSquare, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const LocalSEO = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Lokales SEO - Zen Style Studio</title>
+        <meta name="description" content="Erreichen Sie mehr Kunden in Ihrer Region mit unserer lokalen SEO-Optimierung." />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}
