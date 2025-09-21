@@ -37,6 +37,7 @@ const Blog = () => {
 						<p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto">
 							Einblicke, Tipps und Neuigkeiten aus der Welt des Webdesigns, SEO und der digitalen Präsenz.
 						</p>
+						<p className="text-primary">hello world</p>
 					</div>
 				</div>
 			</section>
