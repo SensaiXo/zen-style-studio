@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import WebDesign from "./pages/WebDesign";
 import SEO from "./pages/SEO";
+import LocalSEO from "./pages/LocalSEO";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/services/webdesign" element={<WebDesign />} />
           <Route path="/services/seo" element={<SEO />} />
+          <Route path="/services/seo/local" element={<LocalSEO />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
