@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,11 +22,19 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#services', label: 'Services' },
-    { href: '#blog', label: 'Blog' },
-    { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: 'Home', isDropdown: false },
+    { 
+      href: '#services', 
+      label: 'Services', 
+      isDropdown: true,
+      dropdownItems: [
+        { href: '/services/webdesign', label: 'Webdesign' },
+        { href: '/services/seo', label: 'SEO & GEO' },
+      ]
+    },
+    { href: '#blog', label: 'Blog', isDropdown: false },
+    { href: '#faq', label: 'FAQ', isDropdown: false },
+    { href: '#contact', label: 'Contact', isDropdown: false },
   ];
 
   return (
@@ -39,13 +54,34 @@ const Navbar = () => {
           <ul className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="relative text-foreground font-medium transition-colors duration-300 hover:text-primary group"
-                >
-                  {link.label}
-                  <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                {link.isDropdown ? (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className="flex items-center relative text-foreground font-medium transition-colors duration-300 hover:text-primary group">
+                      {link.label} <ChevronDown className="h-4 w-4 ml-1" />
+                      <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="bg-background border-primary/20">
+                      {link.dropdownItems?.map((item) => (
+                        <DropdownMenuItem key={item.href} className="hover:bg-accent/50 focus:bg-accent/50">
+                          <Link 
+                            to={item.href} 
+                            className="w-full text-foreground hover:text-primary transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="relative text-foreground font-medium transition-colors duration-300 hover:text-primary group"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </a>
+                )}
               </li>
             ))}
             <li>
@@ -75,13 +111,34 @@ const Navbar = () => {
           <ul className="flex flex-col space-y-4 pt-4 border-t border-primary/20">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block text-foreground font-medium transition-colors duration-300 hover:text-primary"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+                {link.isDropdown ? (
+                  <div className="space-y-2">
+                    <div className="block text-foreground font-medium mb-2">
+                      {link.label}
+                    </div>
+                    <ul className="pl-4 space-y-2 border-l border-primary/20">
+                      {link.dropdownItems?.map((item) => (
+                        <li key={item.href}>
+                          <Link
+                            to={item.href}
+                            className="block text-foreground font-medium transition-colors duration-300 hover:text-primary"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="block text-foreground font-medium transition-colors duration-300 hover:text-primary"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
             <li>

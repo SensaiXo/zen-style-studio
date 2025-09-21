@@ -1,21 +1,19 @@
-import { Globe, Search, Smartphone, Code, BarChart, Z            <div
-              key={index}
-              className="bg-card p-8 rounded-3xl shadow-otter-soft border border-primary/20 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden card-glow"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >rom 'lucide-react';
+import { Globe, Search, Smartphone, Code, BarChart, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Webdesign & Entwicklung',
-      description: 'Responsive Websites mit modernen Frameworks wie Next.js, die schnell laden und auf allen Geräten perfekt aussehen.'
+      description: 'Responsive Websites mit modernen Frameworks wie Next.js, die schnell laden und auf allen Geräten perfekt aussehen.',
+      link: '/services/webdesign'
     },
     {
       icon: <Search className="w-8 h-8" />,
       title: 'SEO & GEO Optimierung',
-      description: 'Keyword-Strategien, Metadaten und lokale Suchoptimierung für bessere Sichtbarkeit in Google.'
+      description: 'Keyword-Strategien, Metadaten und lokale Suchoptimierung für bessere Sichtbarkeit in Google.',
+      link: '/services/seo'
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
@@ -74,9 +72,21 @@ const Services = () => {
               <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 {service.description}
               </p>
+              
+              {service.link && (
+                <Link 
+                  to={service.link}
+                  className="inline-flex items-center text-primary hover:text-primary-hover font-medium transition-colors duration-300"
+                >
+                  Mehr erfahren
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </Link>
+              )}
 
               {/* Hover effect circle */}
               <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-gradient-otter rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
