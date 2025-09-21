@@ -56,14 +56,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-muted to-zen-light/10">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl lg:text-5xl font-bold text-zen-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Connect With Us
           </h2>
-          <p className="text-xl text-zen-gray max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to begin your wellness journey? We're here to guide and support you 
             every step of the way. Reach out to start your transformation today.
           </p>
@@ -72,23 +72,23 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-6" data-aos="fade-right">
-            <h3 className="text-2xl font-semibold text-zen-dark mb-8">
+            <h3 className="text-2xl font-semibold text-foreground mb-8">
               Get In Touch
             </h3>
             
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-zen-soft hover:shadow-zen transition-all duration-300 hover:-translate-y-1"
+                className="flex items-start gap-4 p-6 bg-card rounded-2xl shadow-zen-soft transition-all duration-300 hover:-translate-y-1 card-glow"
               >
                 <div className="w-12 h-12 bg-gradient-zen rounded-xl flex items-center justify-center text-white flex-shrink-0">
                   {info.icon}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-zen-dark mb-2">
+                  <h4 className="font-semibold text-foreground mb-2">
                     {info.title}
                   </h4>
-                  <p className="text-zen-gray whitespace-pre-line">
+                  <p className="text-muted-foreground whitespace-pre-line">
                     {info.content}
                   </p>
                 </div>
@@ -97,15 +97,15 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-3xl shadow-zen-soft" data-aos="fade-left">
-            <h3 className="text-2xl font-semibold text-zen-dark mb-6">
+          <div className="bg-card p-8 rounded-3xl shadow-zen-soft" data-aos="fade-left">
+            <h3 className="text-2xl font-semibold text-foreground mb-6">
               Send Us a Message
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-zen-dark font-medium mb-2">
+                  <label htmlFor="name" className="block text-foreground font-medium mb-2">
                     Your Name
                   </label>
                   <input
@@ -115,13 +115,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-zen-mint/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-white"
+                    className="w-full px-4 py-3 border-2 border-primary/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-input text-foreground"
                     placeholder="Enter your name"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-zen-dark font-medium mb-2">
+                  <label htmlFor="email" className="block text-foreground font-medium mb-2">
                     Email Address
                   </label>
                   <input
@@ -131,14 +131,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-zen-mint/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-white"
+                    className="w-full px-4 py-3 border-2 border-primary/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-input text-foreground"
                     placeholder="Enter your email"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-zen-dark font-medium mb-2">
+                <label htmlFor="subject" className="block text-foreground font-medium mb-2">
                   Subject
                 </label>
                 <input
@@ -148,13 +148,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-zen-mint/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-white"
+                  className="w-full px-4 py-3 border-2 border-primary/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-input text-foreground"
                   placeholder="What can we help you with?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-zen-dark font-medium mb-2">
+                <label htmlFor="message" className="block text-foreground font-medium mb-2">
                   Message
                 </label>
                 <textarea
@@ -164,7 +164,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border-2 border-zen-mint/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-white resize-none"
+                  className="w-full px-4 py-3 border-2 border-primary/30 rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 bg-input text-foreground resize-none"
                   placeholder="Tell us about your wellness goals or ask any questions..."
                 ></textarea>
               </div>

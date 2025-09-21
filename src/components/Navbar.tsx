@@ -25,8 +25,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-lg shadow-otter-soft' 
-        : 'bg-white/90 backdrop-blur-sm'
+        ? 'bg-background/95 backdrop-blur-lg border-b border-primary/20' 
+        : 'bg-background/90 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -41,10 +41,10 @@ const Navbar = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="relative text-otter-text font-medium transition-colors duration-300 hover:text-primary group"
+                  className="relative text-foreground font-medium transition-colors duration-300 hover:text-primary group"
                 >
                   {link.label}
-                  <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
             ))}
@@ -72,12 +72,12 @@ const Navbar = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 pb-4' : 'max-h-0'
         }`}>
-          <ul className="flex flex-col space-y-4 pt-4 border-t border-border">
+          <ul className="flex flex-col space-y-4 pt-4 border-t border-primary/20">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block text-otter-text font-medium transition-colors duration-300 hover:text-primary"
+                  className="block text-foreground font-medium transition-colors duration-300 hover:text-primary"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

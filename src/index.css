@@ -65,7 +65,8 @@
     /* Shadows */
     --shadow-brown: 0 10px 30px hsla(330, 100%, 50%, 0.3);
     --shadow-glow: 0 0 40px hsla(330, 100%, 50%, 0.4);
-    --shadow-soft: 0 4px 15px hsla(330, 80%, 60%, 0.2);
+    --shadow-soft: 0 4px 20px hsla(330, 100%, 50%, 0.3);
+    --shadow-pink: 0 0 25px hsla(330, 100%, 50%, 0.5);
     
     /* Animations */
     --transition-zen: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -144,12 +145,40 @@
     @apply px-8 py-3 rounded-full font-medium transition-all duration-300 inline-block text-center;
     background: var(--gradient-primary);
     color: hsl(var(--primary-foreground));
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 0 15px hsla(var(--primary), 0.5);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
   }
 
   .btn-zen:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-zen);
+    box-shadow: 0 0 25px hsla(var(--primary), 0.7);
+  }
+
+  .btn-zen:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, hsl(var(--primary)), transparent, hsl(var(--primary)));
+    z-index: -1;
+    animation: glowing 3s linear infinite;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 9999px;
+  }
+
+  .btn-zen:hover:before {
+    opacity: 0.5;
+  }
+
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
   }
 
   .btn-zen-outline {
@@ -157,12 +186,15 @@
     background: transparent;
     color: hsl(var(--primary));
     border: 2px solid hsl(var(--primary));
+    position: relative;
+    overflow: hidden;
   }
 
   .btn-zen-outline:hover {
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
     transform: translateY(-2px);
+    box-shadow: 0 0 15px hsla(var(--primary), 0.5);
   }
 
   /* Animations */
@@ -176,6 +208,36 @@
     animation: fadeInRight 1s ease forwards;
     opacity: 0;
     transform: translateX(30px);
+  }
+
+  /* Pink glow card */
+  .card-glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 30px hsla(330, 100%, 50%, 0.3);
+  }
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent, hsla(330, 100%, 50%, 0.6), transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .card-glow:hover::before {
+    opacity: 1;
   }
 
   /* Scroll to top button */
@@ -194,7 +256,7 @@
     visibility: hidden;
     transition: var(--transition-zen);
     z-index: 1000;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-pink);
     display: flex;
     align-items: center;
     justify-content: center;

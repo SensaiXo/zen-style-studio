@@ -36,14 +36,14 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl lg:text-5xl font-bold text-zen-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-zen-gray max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Find answers to common questions about our wellness services, 
             programs, and what you can expect on your journey with us.
           </p>
@@ -54,17 +54,17 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="mb-4 bg-white border border-zen-mint/30 rounded-2xl overflow-hidden shadow-zen-soft hover:shadow-zen transition-all duration-300 hover:border-zen-soft/50"
+              className="mb-4 bg-card border border-primary/30 rounded-2xl overflow-hidden shadow-zen-soft hover:shadow-zen transition-all duration-300 hover:border-primary/50"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
               {/* Question */}
               <button
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-zen-light/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="w-full p-6 text-left flex items-center justify-between hover:bg-primary/5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={activeIndex === index}
               >
-                <h3 className="text-lg font-semibold text-zen-dark pr-4">
+                <h3 className="text-lg font-semibold text-foreground pr-4">
                   {faq.question}
                 </h3>
                 <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-zen flex items-center justify-center text-white transition-transform duration-300 ${
@@ -80,8 +80,8 @@ const FAQ = () => {
                   activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="p-6 pt-0 border-t border-zen-mint/20">
-                  <p className="text-zen-gray leading-relaxed">
+                <div className="p-6 pt-0 border-t border-primary/20">
+                  <p className="text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ const FAQ = () => {
 
         {/* Contact CTA */}
         <div className="text-center mt-12" data-aos="fade-up">
-          <p className="text-zen-gray mb-6">
+          <p className="text-muted-foreground mb-6">
             Still have questions? We're here to help.
           </p>
           <a href="#contact" className="btn-zen">

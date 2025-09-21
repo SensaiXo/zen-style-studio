@@ -38,16 +38,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-otter-dark text-white">
+    <footer className="bg-background text-foreground border-t border-primary/20">
       <div className="container mx-auto px-4 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold mb-4 text-otter-mint">
+            <h3 className="text-2xl font-bold mb-4 text-primary">
               Otterino.com
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-muted-foreground mb-6 leading-relaxed">
               Schweizer Studio für Web- und Digitalprojekte. Wir verbinden kreatives 
               Webdesign mit moderner Sichtbarkeits-Technik für Websites, die gefunden werden.
             </p>
@@ -59,7 +59,7 @@ const Footer = () => {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray-300 hover:bg-otter-warm hover:text-white transition-all duration-300 hover:-translate-y-1"
+                  className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-black transition-all duration-300 hover:-translate-y-1"
                 >
                   {social.icon}
                 </a>
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-otter-mint">
+            <h4 className="text-lg font-semibold mb-6 text-primary">
               Unsere Services
             </h4>
             <ul className="space-y-3">
@@ -77,7 +77,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-otter-mint transition-colors duration-300"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -88,7 +88,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-otter-mint">
+            <h4 className="text-lg font-semibold mb-6 text-primary">
               Unternehmen
             </h4>
             <ul className="space-y-3">
@@ -96,7 +96,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-otter-mint transition-colors duration-300"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -107,7 +107,7 @@ const Footer = () => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-otter-mint">
+            <h4 className="text-lg font-semibold mb-6 text-primary">
               Ressourcen
             </h4>
             <ul className="space-y-3">
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-otter-mint transition-colors duration-300"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -126,19 +126,19 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-white/10 pt-8 mb-8">
+        <div className="border-t border-primary/20 pt-8 mb-8">
           <div className="max-w-md mx-auto text-center">
-            <h4 className="text-xl font-semibold mb-4 text-otter-mint">
+            <h4 className="text-xl font-semibold mb-4 text-primary">
               Bleiben Sie informiert
             </h4>
-            <p className="text-gray-300 mb-6">
+            <p className="text-muted-foreground mb-6">
               Abonnieren Sie unseren Newsletter für Digital-Tipps und Updates.
             </p>
             <div className="flex gap-3">
               <input
                 type="email"
                 placeholder="Ihre E-Mail eingeben"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-otter-mint transition-colors duration-300"
+                className="flex-1 px-4 py-3 bg-input border border-primary/20 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
               />
               <button className="btn-zen whitespace-nowrap">
                 Abonnieren
@@ -148,21 +148,21 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-white/10 pt-8 text-center">
+        <div className="border-t border-primary/20 pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 flex items-center gap-2">
+            <p className="text-muted-foreground flex items-center gap-2">
               © {currentYear} Otterino.com. Made with 
-              <Heart size={16} className="text-otter-mint" />
+              <Heart size={16} className="text-primary" />
               für Ihren digitalen Erfolg.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-otter-mint transition-colors duration-300">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 Datenschutz
               </a>
-              <a href="#" className="text-gray-400 hover:text-otter-mint transition-colors duration-300">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 AGB
               </a>
-              <a href="#" className="text-gray-400 hover:text-otter-mint transition-colors duration-300">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 Cookies
               </a>
             </div>
