@@ -7,65 +7,65 @@
 /* Zen Style Studio Design System */
 @layer base {
   :root {
-    /* Otterino Color Palette - Brown & Jeans Green */
-    --otter-brown: 25 65% 35%;
-    --warm-brown: 25 55% 50%;
-    --light-brown: 25 40% 70%;
-    --soft-brown: 25 30% 85%;
-    --jeans-green: 160 25% 45%;
-    --mint-accent: 160 35% 60%;
-    --dark-brown: 25 45% 25%;
-    --text-brown: 25 35% 30%;
-    --cream: 25 25% 95%;
+    /* Black & Pink Color Palette */
+    --otter-brown: 330 100% 50%;
+    --warm-brown: 330 80% 60%;
+    --light-brown: 330 60% 70%;
+    --soft-brown: 330 40% 80%;
+    --jeans-green: 330 100% 50%;
+    --mint-accent: 330 80% 60%;
+    --dark-brown: 0 0% 0%;
+    --text-brown: 0 0% 100%;
+    --cream: 330 20% 95%;
     
     /* Base tokens */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
     /* Primary brand colors */
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --primary-glow: 346.8 77.2% 49.8%;
+    --primary: 330 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 330 100% 60%;
 
     /* Secondary colors */
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted colors */
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
     /* Accent colors */
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 330 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
     /* Card colors */
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
 
     /* Border and input */
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 346.8 77.2% 49.8%;
+    --border: 330 50% 30%;
+    --input: 0 0% 10%;
+    --ring: 330 100% 50%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Popover */
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--otter-brown)), hsl(var(--warm-brown)), hsl(var(--jeans-green)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--light-brown)) 50%, hsl(var(--jeans-green)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--soft-brown) / 0.3));
-    --gradient-jeans: linear-gradient(45deg, hsl(var(--jeans-green)), hsl(var(--mint-accent)));
+    --gradient-primary: linear-gradient(135deg, hsl(330 100% 50%), hsl(330 80% 60%), hsl(0 0% 0%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(330 100% 50%) 50%, hsl(330 80% 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 0%), hsl(330 50% 10%));
+    --gradient-jeans: linear-gradient(45deg, hsl(330 100% 50%), hsl(330 80% 60%));
     
     /* Shadows */
-    --shadow-brown: 0 10px 30px hsla(var(--otter-brown), 0.3);
-    --shadow-glow: 0 0 40px hsla(var(--jeans-green), 0.4);
-    --shadow-soft: 0 4px 15px hsla(var(--warm-brown), 0.2);
+    --shadow-brown: 0 10px 30px hsla(330, 100%, 50%, 0.3);
+    --shadow-glow: 0 0 40px hsla(330, 100%, 50%, 0.4);
+    --shadow-soft: 0 4px 15px hsla(330, 80%, 60%, 0.2);
     
     /* Animations */
     --transition-zen: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,25 +75,25 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 346.8 77.2% 49.8%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 330 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 330 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 330 50% 30%;
+    --input: 0 0% 10%;
+    --ring: 330 100% 50%;
   }
 }
 
