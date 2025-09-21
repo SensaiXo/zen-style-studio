@@ -16,7 +16,7 @@
     --mint-accent: 330 80% 60%;
     --dark-brown: 0 0% 0%;
     --text-brown: 0 0% 100%;
-    --cream: 330 20% 95%;
+    --cream: 0 0% 95%;
     
     /* Base tokens */
     --background: 0 0% 0%;
@@ -33,11 +33,11 @@
 
     /* Muted colors */
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 85%;
 
     /* Accent colors */
     --accent: 330 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
 
     /* Card colors */
     --card: 0 0% 5%;
@@ -86,9 +86,9 @@
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 85%;
     --accent: 330 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 330 50% 30%;
