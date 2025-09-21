@@ -33,7 +33,7 @@ const Navbar = () => {
         { href: '/services/web-presence', label: 'Web-Präsenz' },
       ]
     },
-    { href: '#blog', label: 'Blog', isDropdown: false },
+    { href: '#blog', label: 'Blog', isDropdown: false, isPage: true },
     { href: '#faq', label: 'FAQ', isDropdown: false },
     { href: '#contact', label: 'Contact', isDropdown: false },
   ];
@@ -78,13 +78,13 @@ const Navbar = () => {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 ) : (
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.isPage ? '/blog' : link.href}
                     className="relative text-foreground font-medium transition-colors duration-300 hover:text-primary group"
                   >
                     {link.label}
                     <span className="absolute bottom-[-6px] left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}
@@ -139,13 +139,13 @@ const Navbar = () => {
                     </ul>
                   </div>
                 ) : (
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.isPage ? '/blog' : link.href}
                     className="block text-foreground font-medium transition-colors duration-300 hover:text-primary"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}

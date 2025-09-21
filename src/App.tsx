@@ -10,6 +10,8 @@ import WebDesign from "./pages/WebDesign";
 import SEO from "./pages/SEO";
 import LocalSEO from "./pages/LocalSEO";
 import WebPresence from "./pages/WebPresence";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/services/seo" element={<SEO />} />
           <Route path="/services/seo/local" element={<LocalSEO />} />
           <Route path="/services/web-presence" element={<WebPresence />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
