@@ -35,8 +35,7 @@ jobs:
         with:
           name: build-files
           path: ./dist
-          repository: ${{ github.repository }}
-          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         if: github.event_name == 'workflow_run'
       
       - name: Build with Vite
