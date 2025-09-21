@@ -1,9 +1,4 @@
-import { Globe, Search, Smartphone, Code, BarChart, Z            <div
-              key={index}
-              className="bg-card p-8 rounded-3xl shadow-otter-soft border border-primary/20 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden card-glow"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >rom 'lucide-react';
+import { Globe, Search, Smartphone, Code, BarChart, Zap } from 'lucide-react';
 
 const Services = () => {
   const services = [
