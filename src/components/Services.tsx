@@ -1,8 +1,5 @@
 import { Globe, Search, Smartphone, Code, BarChart, Zap } from 'lucide-react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cda5da342376caead4bf815ef755ee0fc1235373
 
 const Services = () => {
   const services = [

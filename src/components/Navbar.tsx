@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <h2 className="text-2xl font-bold text-primary">Otterino.com</h2>
+            <Link to="/" className="text-2xl font-bold text-primary">Otterino.com</Link>
           </div>
 
           {/* Desktop Navigation */}
