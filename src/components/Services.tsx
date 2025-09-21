@@ -17,8 +17,9 @@ const Services = () => {
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: 'AEO - Answer Engine Optimization',
-      description: 'Inhalte strukturiert für AI-Assistenten wie ChatGPT und Perplexity als vertrauenswürdige Quelle.'
+      title: 'Digitale Web-Präsenz',
+      description: 'Stärken Sie Ihre Online-Identität mit einer umfassenden digitalen Präsenz über alle relevanten Kanäle.',
+      link: '/services/web-presence'
     },
     {
       icon: <Code className="w-8 h-8" />,
