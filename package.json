@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "build:dev": "vite build --mode development",
+    "build:prod": "tsc && vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:build": "npm run build && npm run preview",
+    "verify": "node -e \"process.platform === 'win32' ? require('child_process').execSync('scripts\\\\verify-build.bat', {stdio: 'inherit'}) : require('child_process').execSync('bash scripts/verify-build.sh', {stdio: 'inherit'})\"",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
