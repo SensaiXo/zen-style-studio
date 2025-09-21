@@ -30,6 +30,7 @@ const Navbar = () => {
       dropdownItems: [
         { href: '/services/webdesign', label: 'Webdesign' },
         { href: '/services/seo', label: 'SEO & GEO' },
+        { href: '/services/web-presence', label: 'Web-Präsenz' },
       ]
     },
     { href: '#blog', label: 'Blog', isDropdown: false },
